@@ -21,6 +21,7 @@ module WeixinJsSDK
       end
     end
 
-    class ServerHTTPError < Standard; end
+    class ServerHTTPError < Standard
+    end
   end
 end
