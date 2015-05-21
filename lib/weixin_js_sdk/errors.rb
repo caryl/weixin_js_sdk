@@ -5,9 +5,9 @@ module WeixinJsSDK
     class InvalidRequest < Standard
       DOC_URI = 'http://mp.weixin.qq.com/wiki/17/fa4e1434e57290788bde25603fa2fcbd.html'.freeze
 
-      def initialize(error_code: '', message: '')
-        @error_code = error_code
-        @message = message
+      def initialize(ps = {})
+        @error_code = ps[:error_code] || ''
+        @message = ps[:message] || ''
       end
 
       def message
