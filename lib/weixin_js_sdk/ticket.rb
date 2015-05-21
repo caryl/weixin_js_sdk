@@ -2,8 +2,8 @@ module WeixinJsSDK
   class Ticket
     URI_TEMPLATE = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=%{access_token}&type=jsapi'.freeze
 
-    def initialize(access_token: '')
-      @access_token = access_token
+    def initialize(ps={})
+      @access_token = ps[:access_token] || ''
     end
 
     def fetch
