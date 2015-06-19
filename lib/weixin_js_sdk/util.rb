@@ -4,7 +4,7 @@ module WeixinJsSDK
   class Util
     def self.get_json(uri_str)
       uri = URI(uri_str)
-      request = Net::HTTP::Get.new(uri)
+      request = Net::HTTP::Get.new(uri.to_s)
 
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
